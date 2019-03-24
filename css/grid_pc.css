@@ -1,0 +1,79 @@
+
+.wrapper{
+    display: grid;
+    grid-row-gap: 30px;
+}
+
+.wrapper .navigation{
+    height: 56px;
+    border-bottom: 1px solid #efefef;
+    display: grid;
+    grid-template-columns: auto 10% 25% 15% auto;
+    grid-template-rows: auto;
+    align-items: center;
+    grid-template-areas:
+        "side-left logo search user-menu side-right";
+}
+
+.wrapper .navigation .logo{
+    grid-area: logo;
+    line-height: 1.4rem;
+}
+
+.wrapper .navigation .logo i.icon, i.icons{
+    font-size: 1.5rem!important;
+    line-height: 1.5rem!important;
+    color: #767676;
+}
+
+.wrapper .navigation .search{
+    grid-area: search;
+}
+
+.wrapper .navigation .user-menu{
+    grid-area: user-menu;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: auto 35% 15% auto;
+    grid-template-rows: 580px;
+    grid-template-areas:
+        "side-left main-content sidebar side-right";
+    grid-column-gap: 30px;
+}
+
+.main .content{
+    grid-area: main-content;
+    /*background-color: #9d9d9e;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+}
+
+.main .content .ads{
+    height: 250px;
+    background-color: rgb(255, 130, 150);
+}
+
+.main .content .post{
+    height: 700px;
+    background-color: #bedaff;
+}
+
+.main .sidebar{
+    grid-area: sidebar;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+}
+
+.main .sidebar .recommend-item-top{
+    height: 250px;
+    background-color: #e2c8ff;
+}
+
+.main .sidebar .recommend-item{
+    height: 290px;
+    background-color: #8e9091;
+}
